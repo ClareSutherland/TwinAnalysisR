@@ -1,0 +1,17 @@
+digraph G {
+	splines = "FALSE";
+	# Latents
+	a1 [shape = circle];
+	c1 [shape = circle];
+	e1 [shape = circle];
+
+	# Manifests
+	bmi1 [shape = square];
+a1 -> bmi1 [label = "0.86"];
+c1 -> bmi1 [label = "0"];
+e1 -> bmi1 [label = "0.51"];
+	{rank = same;  bmi1 };
+	{rank = min;  a1 };
+	{rank = max;  c1; e1 };
+
+}
